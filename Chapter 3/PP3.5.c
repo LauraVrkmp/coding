@@ -7,7 +7,7 @@ int main(void)
     printf("Enter the number from 1 to 16 in any order:\n");
     scanf("%d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d", &a1, &b1, &c1, &d1, &a2, &b2, &c2, &d2, &a3, &b3, &c3, &d3, &a4, &b4, &c4, &d4);
 
-    printf("%2d%3d%3d%3d\n", a1, b1, c1, d1);
+    printf("\n%2d%3d%3d%3d\n", a1, b1, c1, d1);
     printf("%2d%3d%3d%3d\n", a2, b2, c2, d2);
     printf("%2d%3d%3d%3d\n", a3, b3, c3, d3);
     printf("%2d%3d%3d%3d\n\n", a4, b4, c4, d4);
