@@ -16,9 +16,9 @@ int main(void)
     float first_payment = loan - monthly_payment + monthly_interest_percentage * loan;
     printf("Balance remaining after first payment: %0.2f\n", first_payment);
     float second_payment = first_payment - monthly_payment + monthly_interest_percentage * first_payment;
-    printf("Balance remaining after first payment: %0.2f\n", second_payment);
+    printf("Balance remaining after second payment: %0.2f\n", second_payment);
     float third_payment = second_payment - monthly_payment + monthly_interest_percentage * second_payment;
-    printf("Balance remaining after first payment: %0.2f\n", third_payment);
+    printf("Balance remaining after third payment: %0.2f\n", third_payment);
 
     return 0;
 }
