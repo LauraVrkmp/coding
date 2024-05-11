@@ -29,7 +29,7 @@ int main(void)
             putchar(' ');
     }
 
-    printf("%c\n", terminate);
+    printf("\b%c\n", terminate);
 
     return 0;
 }
