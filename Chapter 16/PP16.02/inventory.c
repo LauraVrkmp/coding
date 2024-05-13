@@ -1,15 +1,7 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include "inventory.h"
 #include "readline.h"
-
-#define NAME_LEN 25
-#define MAX_PARTS 100
-
-struct part {
-    int number;
-    char name[NAME_LEN+1];
-    int on_hand;
-} inventory[MAX_PARTS];
+#include "quicksort.h"
 
 int num_parts = 0;   /* number of parts currently stored */
 
@@ -18,7 +10,6 @@ void insert(void);
 void search(void);
 void update(void);
 void print(void);
-int compare(const void* a, const void* b);
 
 int main(void)
 {
@@ -112,16 +103,11 @@ void print(void)
 {
     int i;
     
-    qsort(inventory, num_parts, sizeof(struct part), compare);
+    quicksort(inventory, 0, num_parts - 1);
 
     printf("Part Number   Part Name                  "
             "Quantity on Hand\n");
     for (i = 0; i < num_parts; i++)
         printf("%7d       %-25s%11d\n", inventory[i].number,
             inventory[i].name, inventory[i].on_hand);
-}
-
-int compare(const void* a, const void* b)
-{
-    return ((struct part*)a)->number - ((struct part*)b)->number;
 }
